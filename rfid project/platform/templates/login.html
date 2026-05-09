@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PréSence RFID — Connexion</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 2.5rem 2.2rem 2rem;
+      width: 100%;
+      max-width: 380px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #1A3A5C;
+      letter-spacing: 0.5px;
+    }
+    .logo h1 span { color: #2E75B6; }
+    .logo p {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 5px;
+      margin-top: 14px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    input:focus { border-color: #2E75B6; }
+    .btn {
+      width: 100%;
+      margin-top: 1.4rem;
+      padding: 11px;
+      background: #1A3A5C;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #2E75B6; }
+    .error {
+      background: #fee2e2;
+      color: #b91c1c;
+      border-radius: 7px;
+      padding: 9px 13px;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <h1>Pré<span>Sence</span> RFID</h1>
+      <p>Système de gestion de présence</p>
+    </div>
+    <form method="POST">
+      <label for="username">Nom d'utilisateur</label>
+      <input type="text" id="username" name="username" placeholder="ex: prof" required autofocus>
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required>
+      <button type="submit" class="btn">Se connecter</button>
+      {% if error %}
+      <div class="error">{{ error }}</div>
+      {% endif %}
+    </form>
+    <div class="footer">UNIVERSITE SAAD DAHLAB — Département electronique</div>
+  </div>
+</body>
+</html>
