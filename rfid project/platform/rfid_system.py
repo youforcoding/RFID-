@@ -15,11 +15,11 @@ FILE      = "presence.xlsx"
 DB_FILE   = "presence.db"
 
 students = {
-    "9C9E1A06": ("Younes",  "Aoudache"),
-    "C0861217": ("Zaki",    "Aissat"),
-    "B0E9C917": ("Yacine",  "Berkache"),
-    "C01DED17": ("Samia",   "Benslimane"),
-    "C0067217": ("Rania",   "Khemissat"),
+    "9C9E1A06": ("étudiant",  "1"),
+    "C0861217": ("étudiant",    "2"),
+    "B0E9C917": ("étudiant",  "3"),
+    "C01DED17": ("étudiant",   "4"),
+    "C0067217": ("étudiant",   "5"),
 }
 
 # = SQLITE INIT 
