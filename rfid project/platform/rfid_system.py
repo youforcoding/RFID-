@@ -45,9 +45,9 @@ def init_db():
             password TEXT
         )
     """)
-    # compte de prof  (username: prof  /  password: blida1 )
+    # compte de prof  (username: prof  /  password: ****** )
     c.execute("INSERT OR IGNORE INTO professeurs (username, password) VALUES (?, ?)",
-              ("prof", "blida1"))
+              ("prof", "******"))
     conn.commit()
     conn.close()
 
